@@ -21,6 +21,7 @@ class Employee(models.Model):
         null=True,
         blank=True,
     )
+    avatar = models.FileField(upload_to='uploads/')
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
